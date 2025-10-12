@@ -37,7 +37,7 @@ export default function AboutMe() {
         <div className="text-center mb-12" data-reveal>
           <h2 className="text-3xl md:text-4xl font-bold">About</h2>
           <p className="text-white/80 mt-2 max-w-2xl mx-auto">
-            Hi, I'm Durgesh Singh, a passionate AI & Web Developer who loves turning ideas into intelligent and user-friendly digital products. I enjoy building innovative projects, exploring new technologies, and continuously improving my skills to create real-world impact.
+            Hi, I&apos;m Durgesh Singh, a passionate AI & Web Developer who loves turning ideas into intelligent and user-friendly digital products. I enjoy building innovative projects, exploring new technologies, and continuously improving my skills to create real-world impact.
           </p>
         </div>
 

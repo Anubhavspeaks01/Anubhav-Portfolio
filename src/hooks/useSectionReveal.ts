@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { gsap, ScrollTrigger } from "@/lib/gsap";
+import { gsap } from "@/lib/gsap";
 
 type Options = {
   selector?: string; // query selector for items within container
@@ -10,17 +10,18 @@ type Options = {
   stagger?: number;
 };
 
-export default function useSectionReveal(container: React.RefObject<HTMLElement>, opts: Options = {}) {
+export default function useSectionReveal(
+  container: React.RefObject<HTMLElement>,
+  {
+    selector = "[data-reveal]",
+    y = 24,
+    duration = 0.6,
+    stagger = 0.06,
+  }: Options = {}
+) {
   useEffect(() => {
     if (!container.current) return;
     const ctx = gsap.context(() => {
-      const {
-        selector = "[data-reveal]",
-        y = 24,
-        duration = 0.6,
-        stagger = 0.06,
-      } = opts;
-
       const items = gsap.utils.toArray<HTMLElement>(selector);
       items.forEach((el, i) => {
         gsap.from(el, {
@@ -38,5 +39,6 @@ export default function useSectionReveal(container: React.RefObject<HTMLElement>
       });
     }, container);
     return () => ctx.revert();
-  }, [container, opts.selector, opts.y, opts.duration, opts.stagger]);
+  // Only re-run when container or defined option values change
+  }, [container, selector, y, duration, stagger]);
 }

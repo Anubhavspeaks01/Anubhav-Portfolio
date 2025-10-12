@@ -15,7 +15,7 @@ export default function CurrentWork() {
     <section className="py-20" ref={ref}>
       <div className="container mx-auto px-6">
         <div className="text-center mb-12" data-reveal>
-          <h2 className="text-3xl md:text-4xl font-bold">What I'm Currently Doing</h2>
+          <h2 className="text-3xl md:text-4xl font-bold">What I&apos;m Currently Doing</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {items.map((it, i) => (

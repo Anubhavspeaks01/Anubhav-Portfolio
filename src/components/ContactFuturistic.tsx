@@ -46,8 +46,8 @@ export default function ContactFuturistic() {
         </div>
 
         <div className="text-center glass-card p-6 rounded-xl border border-white/10" data-reveal>
-          <h3 className="text-lg md:text-xl font-semibold mb-2">Let's Build Something Amazing Together!</h3>
-          <p className="text-white/70 mb-5 text-sm md:text-base">I'm always interested in hearing about new projects, opportunities, and ways to collaborate. Whether you have a question or just want to say hi, feel free to reach out!</p>
+          <h3 className="text-lg md:text-xl font-semibold mb-2">Let&apos;s Build Something Amazing Together!</h3>
+          <p className="text-white/70 mb-5 text-sm md:text-base">I&apos;m always interested in hearing about new projects, opportunities, and ways to collaborate. Whether you have a question or just want to say hi, feel free to reach out!</p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a href="mailto:dsgaur1125@gmail.com" className="rounded-lg bg-gradient-to-r from-cyan-500/80 to-teal-500/80 hover:from-cyan-500 hover:to-teal-500 py-2 px-5 text-sm">Send Email</a>
             <a href="https://www.linkedin.com/in/durgesh-singh-09844b253/" target="_blank" rel="noopener noreferrer" className="rounded-lg border border-cyan-400/40 hover:bg-cyan-400/10 py-2 px-5 text-sm">Connect on LinkedIn</a>

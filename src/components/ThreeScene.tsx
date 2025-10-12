@@ -1,6 +1,6 @@
 "use client";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { OrbitControls, PerspectiveCamera, Points, PointMaterial, Environment } from "@react-three/drei";
+import { OrbitControls, PerspectiveCamera, PointMaterial, Environment } from "@react-three/drei";
 import * as THREE from "three";
 import { useMemo, useRef } from "react";
 
@@ -79,7 +79,7 @@ function NeuralNetwork() {
     }
     const posAttr = pointsRef.current?.geometry.getAttribute("position");
     if (posAttr) {
-      // @ts-ignore - underlying buffer matches
+      // @ts-expect-error - assigning precomputed Float32Array buffer
       posAttr.array = positions;
       posAttr.needsUpdate = true;
     }
@@ -101,7 +101,7 @@ function NeuralNetwork() {
     }
     const lineAttr = linesRef.current?.geometry.getAttribute("position");
     if (lineAttr) {
-      // @ts-ignore
+      // @ts-expect-error - assigning precomputed Float32Array buffer
       lineAttr.array = lp;
       lineAttr.needsUpdate = true;
     }
@@ -110,7 +110,6 @@ function NeuralNetwork() {
   return (
     <group>
       <points ref={pointsRef} geometry={pointGeometry}>
-        {/* @ts-ignore */}
         <PointMaterial size={0.035} sizeAttenuation transparent color="#7af5ff" opacity={0.9} depthWrite={false} />
       </points>
       <lineSegments ref={linesRef} geometry={lineGeometry}>

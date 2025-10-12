@@ -1,5 +1,6 @@
 "use client";
 import { useRef } from "react";
+import Image from "next/image";
 import useSectionReveal from "@/hooks/useSectionReveal";
 
 export default function TechStackFuturistic() {
@@ -77,16 +78,17 @@ export default function TechStackFuturistic() {
           <div key={`${tech.name}-${i}`} className="glass-card p-4" data-reveal>
             <div className="flex items-center gap-3">
               {tech.icon ? (
-                <img
+                <Image
                   src={brandIconSlug[tech.icon]
                     ? `https://cdn.simpleicons.org/${brandIconSlug[tech.icon]}/${brandIconColors[tech.icon] ?? "ffffff"}`
                     : `https://skillicons.dev/icons?i=${tech.icon}`}
                   alt={`${tech.name} icon`}
+                  width={24}
+                  height={24}
                   className="w-6 h-6 rounded-sm"
-                  loading="lazy"
                   onError={(e) => {
                     const img = e.currentTarget as HTMLImageElement;
-                    img.onerror = null; // prevent loop
+                    // fallback to white simple icons alias
                     const alias = brandIconSlug[tech.icon] ?? tech.icon;
                     img.src = `https://cdn.simpleicons.org/${alias}/ffffff`;
                   }}

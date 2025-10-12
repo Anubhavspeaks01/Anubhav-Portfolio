@@ -1,7 +1,9 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-if (typeof window !== "undefined" && gsap.core.globals().ScrollTrigger === undefined) {
+// In the browser, register ScrollTrigger once; in SSR this block is skipped
+if (typeof window !== "undefined") {
+  // gsap.registerPlugin is idempotent; safe to call multiple times
   gsap.registerPlugin(ScrollTrigger);
 }
 
