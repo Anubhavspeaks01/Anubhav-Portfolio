@@ -1,6 +1,7 @@
 "use client";
 import { useRef } from "react";
 import Image from "next/image";
+import useParallax from "@/hooks/useParallax";
 import useSectionReveal from "@/hooks/useSectionReveal";
 
 export default function TechStackFuturistic() {
@@ -67,8 +68,11 @@ export default function TechStackFuturistic() {
   const databases = technologies.filter(t => t.category === "Databases");
   const tools = technologies.filter(t => t.category === "Tools");
 
-  const Column = ({ title, items }: { title: string; items: typeof technologies }) => (
-    <div data-reveal>
+  const Column = ({ title, items }: { title: string; items: typeof technologies }) => {
+    const colRef = useRef<HTMLDivElement | null>(null);
+    useParallax(colRef, { amount: 14 });
+    return (
+    <div data-reveal ref={colRef}>
       <h3 className="text-2xl font-semibold mb-6 flex items-center gap-3">
         <span className="w-2 h-2 rounded-full bg-cyan-400"></span>
         {title}
@@ -102,12 +106,12 @@ export default function TechStackFuturistic() {
         ))}
       </div>
     </div>
-  );
+  ); };
 
   return (
     <section className="py-24" ref={ref}>
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16" data-reveal>
+  <div className="text-center mb-16 animate-pulse [animation-duration:3s]" data-reveal>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Tech <span className="text-cyan-400">Stack</span>
           </h2>

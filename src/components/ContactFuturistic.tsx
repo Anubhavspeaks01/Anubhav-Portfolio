@@ -3,10 +3,13 @@
 import { Github, Linkedin, Mail, MapPin } from "lucide-react";
 import { useRef } from "react";
 import useSectionReveal from "@/hooks/useSectionReveal";
+import useParallax from "@/hooks/useParallax";
 
 export default function ContactFuturistic() {
   const ref = useRef<HTMLElement>(null!);
   useSectionReveal(ref);
+  const headingRef = useRef<HTMLDivElement | null>(null);
+  useParallax(headingRef, { amount: 12 });
   const cards = [
     { icon: <Mail className="w-5 h-5" />, label: "Email", value: "dsgaur1125@gmail.com", href: "mailto:dsgaur1125@gmail.com" },
     { icon: <Github className="w-5 h-5" />, label: "GitHub", value: "DurgeshRajput11", href: "https://github.com/DurgeshRajput11" },
@@ -17,7 +20,7 @@ export default function ContactFuturistic() {
   return (
     <section id="contact" className="py-20" ref={ref}>
       <div className="container mx-auto px-6 max-w-4xl">
-        <div className="text-center mb-12" data-reveal>
+        <div className="text-center mb-12" data-reveal ref={headingRef}>
           <h2 className="text-3xl md:text-4xl font-bold">
             Get In <span className="text-cyan-400">Touch</span>
           </h2>
@@ -29,7 +32,7 @@ export default function ContactFuturistic() {
             <a
               key={i}
               href={c.href}
-              className="group flex items-start gap-4 rounded-2xl border border-white/10 bg-white/[0.04] p-5 md:p-6 backdrop-blur-sm transition-colors hover:border-cyan-400/40"
+              className="group flex items-start gap-4 rounded-2xl border border-white/10 bg-white/[0.04] p-5 md:p-6 backdrop-blur-sm transition-colors hover:border-cyan-400/40 touch-smooth"
               data-reveal
               target={c.href?.startsWith('http') ? '_blank' : undefined}
               rel={c.href?.startsWith('http') ? 'noopener noreferrer' : undefined}

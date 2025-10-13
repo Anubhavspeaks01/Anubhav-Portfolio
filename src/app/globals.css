@@ -48,3 +48,16 @@ body {
   transform: translate(-50%, -50%);
   z-index: 50;
 }
+
+/* Touch-friendly smooth press for cards (no hover jump on mobile) */
+.touch-smooth {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  will-change: transform;
+  transition: transform .2s ease, box-shadow .3s ease;
+}
+@media (pointer: coarse) {
+  .touch-smooth:active {
+    transform: translateY(2px);
+  }
+}

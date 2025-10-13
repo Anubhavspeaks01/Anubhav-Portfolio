@@ -2,10 +2,13 @@
 import { useRef } from "react";
 import useSectionReveal from "@/hooks/useSectionReveal";
 import { ExternalLink, Github } from "lucide-react";
+import useParallax from "@/hooks/useParallax";
 
 export default function ProjectsFuturistic() {
   const ref = useRef<HTMLElement>(null!);
   useSectionReveal(ref);
+  const headingRef = useRef<HTMLDivElement>(null!);
+  useParallax(headingRef, { amount: 18 });
   const projects = [
     {
       title: "StylishGenie",
@@ -54,7 +57,7 @@ export default function ProjectsFuturistic() {
   return (
     <section id="projects" className="py-24" ref={ref}>
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16" data-reveal>
+  <div className="text-center mb-16" data-reveal ref={headingRef}>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Featured <span className="text-cyan-400">Projects</span>
           </h2>
@@ -65,7 +68,7 @@ export default function ProjectsFuturistic() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="glass-card p-6 hover:border-cyan-400/50 transition-all hover:scale-105 flex flex-col"
+              className="glass-card p-6 hover:border-cyan-400/50 transition-all hover:scale-105 flex flex-col touch-smooth"
               data-reveal
             >
               <div className="flex-1 space-y-4">
@@ -92,7 +95,7 @@ export default function ProjectsFuturistic() {
                 </div>
               </div>
 
-              <div className="mt-6 flex gap-3">
+                 <div className="mt-6 flex gap-3">
                 {project.url && (
                   <button
                     className="flex-1 rounded-lg bg-gradient-to-r from-cyan-500/80 to-teal-500/80 hover:from-cyan-500 hover:to-teal-500 py-2.5 text-white inline-flex items-center justify-center gap-2"
@@ -115,7 +118,7 @@ export default function ProjectsFuturistic() {
                     View Code
                   </button>
                 )}
-              </div>
+                 </div>
             </div>
           ))}
         </div>

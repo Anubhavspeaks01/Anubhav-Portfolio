@@ -1,10 +1,13 @@
 "use client";
 import { useRef } from "react";
 import useSectionReveal from "@/hooks/useSectionReveal";
+import useParallax from "@/hooks/useParallax";
 
 export default function AboutMe() {
   const ref = useRef<HTMLElement>(null!);
   useSectionReveal(ref);
+  const headingRef = useRef<HTMLDivElement | null>(null);
+  useParallax(headingRef, { amount: 12 });
 
   const features = [
     { title: "Education", desc: "B.Tech (IT), IIIT Una (2024–2028)" },
@@ -34,7 +37,7 @@ export default function AboutMe() {
         <div className="h-full w-full rounded-full bg-[conic-gradient(from_0deg,rgba(51,208,255,0.15),rgba(180,51,255,0.15),transparent_60%)] animate-[spin_18s_linear_infinite]" />
       </div>
       <div className="container mx-auto px-6">
-        <div className="text-center mb-12" data-reveal>
+  <div className="text-center mb-12" data-reveal ref={headingRef}>
           <h2 className="text-3xl md:text-4xl font-bold">About</h2>
           <p className="text-white/80 mt-2 max-w-2xl mx-auto">
             Hi, I&apos;m Durgesh Singh, a passionate AI & Web Developer who loves turning ideas into intelligent and user-friendly digital products. I enjoy building innovative projects, exploring new technologies, and continuously improving my skills to create real-world impact.
@@ -45,7 +48,7 @@ export default function AboutMe() {
           {features.map((f, i) => (
             <div
               key={i}
-              className="group p-6 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm will-change-transform transition-transform duration-150"
+              className="group p-6 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm will-change-transform transition-transform duration-150 touch-smooth hover:shadow-[0_0_20px_rgba(51,208,255,0.15)]"
               onMouseMove={handleTiltMove}
               onMouseLeave={handleTiltLeave}
               data-reveal

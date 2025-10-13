@@ -5,10 +5,13 @@ import ThreeScene from "./ThreeScene";
 import Image from "next/image";
 import { Github, Linkedin, Mail } from "lucide-react";
 import useCursor from "@/hooks/useCursor";
+import useParallax from "@/hooks/useParallax";
 
 export default function Hero3D() {
   const nameRef = useRef<HTMLHeadingElement>(null);
   const tagRef = useRef<HTMLParagraphElement>(null);
+  const leftRef = useRef<HTMLDivElement | null>(null);
+  const imgWrapRef = useRef<HTMLDivElement | null>(null);
   const [imgError, setImgError] = useState(false);
 
   useEffect(() => {
@@ -25,6 +28,21 @@ export default function Hero3D() {
     );
   }, []);
   useCursor();
+  useParallax(leftRef, { amount: 20 });
+
+  useEffect(() => {
+    if (!imgWrapRef.current) return;
+    const ctx = gsap.context(() => {
+      gsap.to(imgWrapRef.current, {
+        y: -8,
+        duration: 2.2,
+        ease: "sine.inOut",
+        yoyo: true,
+        repeat: -1,
+      });
+    });
+    return () => ctx.revert();
+  }, []);
 
   return (
     <section className="relative min-h-[85vh] flex items-center overflow-hidden">
@@ -43,7 +61,7 @@ export default function Hero3D() {
   <div className="relative z-10 container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           {/* Text column */}
-          <div className="order-2 md:order-1 text-center md:text-left relative z-10 p-4 md:p-6">
+          <div ref={leftRef} className="order-2 md:order-1 text-center md:text-left relative z-10 p-4 md:p-6">
             {/* Soft backdrop to keep the name box visible on all screens (behind text) */}
             <div className="pointer-events-none absolute -inset-3 md:-inset-6 rounded-2xl bg-black/40 md:bg-black/30 backdrop-blur-sm z-0 ring-1 ring-white/10" aria-hidden="true" />
             {/* Foreground content */}
@@ -64,13 +82,13 @@ export default function Hero3D() {
               </p>
 
               <div className="mt-8 flex flex-wrap gap-4 justify-center md:justify-start">
-                <a href="#projects" className="rounded-lg bg-gradient-to-r from-cyan-500/80 to-teal-500/80 hover:from-cyan-500 hover:to-teal-500 py-2.5 px-6">
+                <a href="#projects" className="rounded-lg bg-gradient-to-r from-cyan-500/80 to-teal-500/80 hover:from-cyan-500 hover:to-teal-500 py-2.5 px-6 hover:-translate-y-0.5 transition-transform">
                   View Projects
                 </a>
-                <a href="#contact" className="rounded-lg border border-cyan-400/40 hover:bg-cyan-400/10 py-2.5 px-6">
+                <a href="#contact" className="rounded-lg border border-cyan-400/40 hover:bg-cyan-400/10 py-2.5 px-6 hover:-translate-y-0.5 transition-transform">
                   Get in Touch
                 </a>
-                <a href="/Resume durgesh.pdf" target="_blank" className="rounded-lg border border-cyan-400/40 bg-transparent hover:bg-cyan-400/10 py-2.5 px-6">
+                <a href="/Resume durgesh.pdf" target="_blank" className="rounded-lg border border-cyan-400/40 bg-transparent hover:bg-cyan-400/10 py-2.5 px-6 hover:-translate-y-0.5 transition-transform">
                   Download Resume
                 </a>
               </div>
@@ -82,7 +100,7 @@ export default function Hero3D() {
             <div className="relative group">
               {/* Cyan-only glow (removed fuchsia) */}
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-cyan-500 rounded-full blur-3xl opacity-40 group-hover:opacity-60 transition-opacity" />
-              <div className="relative w-56 h-56 md:w-[26rem] md:h-[26rem] rounded-full overflow-hidden border-4 border-cyan-400/30 shadow-[0_0_40px_rgba(51,208,255,0.2)] flex items-center justify-center bg-black/20">
+              <div ref={imgWrapRef} className="relative w-56 h-56 md:w-[26rem] md:h-[26rem] rounded-full overflow-hidden border-4 border-cyan-400/30 shadow-[0_0_40px_rgba(51,208,255,0.2)] flex items-center justify-center bg-black/20">
                 {!imgError ? (
                   <Image
                     src="/profile.jpg"
