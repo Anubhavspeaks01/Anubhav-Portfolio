@@ -21,7 +21,7 @@ npm install
 npm run dev
 ```
 
-Open Dsrajput.dev to view the site.
+Open https://Dsrajput.dev to view the site.
 
 ### Scripts
 - dev: Start the development server
