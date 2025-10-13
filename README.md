@@ -21,7 +21,7 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:3000 to view the site.
+Open Dsrajput.dev to view the site.
 
 ### Scripts
 - dev: Start the development server
