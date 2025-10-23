@@ -2,7 +2,7 @@
 
 Futuristic personal portfolio built with Next.js, Tailwind CSS, and a subtle 3D neural-network background. Sections include Hero, About, Projects, Tech Stack, and Contact, with smooth GSAP reveal animations and a clean cyan/teal theme.
 
-- Live site: https://durgesh-portfolio-pied.vercel.app/
+- Live site: https://dsrajput.dev
 - Repo: https://github.com/DurgeshRajput11/Durgesh-Portfolio
 
 ### Features
