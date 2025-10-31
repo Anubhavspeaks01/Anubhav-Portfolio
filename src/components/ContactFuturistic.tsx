@@ -11,12 +11,12 @@ export default function ContactFuturistic() {
   const headingRef = useRef<HTMLDivElement | null>(null);
   useParallax(headingRef, { amount: 12 });
   const cards = [
-    { icon: <Mail className="w-5 h-5" />, label: "Email", value: "dsgaur1125@gmail.com", href: "mailto:dsgaur1125@gmail.com" },
-    { icon: <Github className="w-5 h-5" />, label: "GitHub", value: "DurgeshRajput11", href: "https://github.com/DurgeshRajput11" },
-    { icon: <Linkedin className="w-5 h-5" />, label: "LinkedIn", value: "Durgesh Singh", href: "https://www.linkedin.com/in/durgesh-singh-09844b253/" },
-    { icon: <MapPin className="w-5 h-5" />, label: "Location", value: "IIIT Una, Himachal Pradesh" },
+    { icon: <Mail className="w-5 h-5" />, label: "Email", value: "singhanubhav9415@gmail.com", href: "mailto:singhanubhav9415@gmail.com" },
+    { icon: <Github className="w-5 h-5" />, label: "GitHub", value: "Anubhavspeaks01", href: "https://github.com/Anubhavspeaks01" },
+    { icon: <Linkedin className="w-5 h-5" />, label: "LinkedIn", value: "Anubhav Singh", href: "https://www.linkedin.com/in/anubhavsinghiitm/" },
+    { icon: <MapPin className="w-5 h-5" />, label: "Location", value: "KIET Group Of Institutions, Ghaziabad" },
   ];
-
+ 
   return (
     <section id="contact" className="py-20" ref={ref}>
       <div className="container mx-auto px-6 max-w-4xl">
@@ -53,7 +53,7 @@ export default function ContactFuturistic() {
           <p className="text-white/70 mb-5 text-sm md:text-base">I&apos;m always interested in hearing about new projects, opportunities, and ways to collaborate. Whether you have a question or just want to say hi, feel free to reach out!</p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a href="mailto:dsgaur1125@gmail.com" className="rounded-lg bg-gradient-to-r from-cyan-500/80 to-teal-500/80 hover:from-cyan-500 hover:to-teal-500 py-2 px-5 text-sm">Send Email</a>
-            <a href="https://www.linkedin.com/in/durgesh-singh-09844b253/" target="_blank" rel="noopener noreferrer" className="rounded-lg border border-cyan-400/40 hover:bg-cyan-400/10 py-2 px-5 text-sm">Connect on LinkedIn</a>
+            <a href="https://www.linkedin.com/in/anubhavsinghiitm/" target="_blank" rel="noopener noreferrer" className="rounded-lg border border-cyan-400/40 hover:bg-cyan-400/10 py-2 px-5 text-sm">Connect on LinkedIn</a>
           </div>
         </div>
       </div>

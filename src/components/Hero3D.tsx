@@ -70,12 +70,14 @@ export default function Hero3D() {
                 ref={nameRef}
                 className="text-5xl md:text-7xl font-extrabold tracking-tight text-white drop-shadow-[0_0_25px_rgba(51,208,255,0.35)]"
               >
-                Durgesh Singh
+                Anubhav Singh
               </h1>
               <p ref={tagRef} className="mt-4 text-lg md:text-2xl text-cyan-200/90">
-                AI/ML Enthusiast • Computer Vision • Gen AI
+                • AI/ML Enthusiast • Computer Vision • Gen AI
                 <br />
-                • Ex- Research Intern IIITDM Jabalpur
+                 • DSA | Competitive Programming
+                <br />
+                • Present- ML Intern @ PropGrowthX | Exploring real-world AI |  Open to new opportunities
               </p>
               <p className="mt-4 text-base md:text-lg text-white/95 drop-shadow-sm leading-relaxed max-w-2xl md:max-w-none mx-auto md:mx-0">
                 Passionate about building intelligent solutions with AI, Machine Learning, and Computer Vision.
@@ -88,7 +90,7 @@ export default function Hero3D() {
                 <a href="#contact" className="rounded-lg border border-cyan-400/40 hover:bg-cyan-400/10 py-2.5 px-6 hover:-translate-y-0.5 transition-transform">
                   Get in Touch
                 </a>
-                <a href="/Resume durgesh.pdf" target="_blank" className="rounded-lg border border-cyan-400/40 bg-transparent hover:bg-cyan-400/10 py-2.5 px-6 hover:-translate-y-0.5 transition-transform">
+                <a href="/Resume Anubhav.pdf" target="_blank" className="rounded-lg border border-cyan-400/40 bg-transparent hover:bg-cyan-400/10 py-2.5 px-6 hover:-translate-y-0.5 transition-transform">
                   Download Resume
                 </a>
               </div>
@@ -103,8 +105,8 @@ export default function Hero3D() {
               <div ref={imgWrapRef} className="relative w-56 h-56 md:w-[26rem] md:h-[26rem] rounded-full overflow-hidden border-4 border-cyan-400/30 shadow-[0_0_40px_rgba(51,208,255,0.2)] flex items-center justify-center bg-black/20">
                 {!imgError ? (
                   <Image
-                    src="/profile.jpg"
-                    alt="Durgesh Singh"
+                    src="/profile2.jpg"
+                    alt="Anubhav Singh"
                     fill
                     sizes="(max-width: 768px) 224px, 416px"
                     className="object-cover"
@@ -127,7 +129,7 @@ export default function Hero3D() {
         {/* Socials */}
         <div className="mt-8 flex gap-5 justify-center md:justify-start">
           <a
-            href="https://github.com/DurgeshRajput11"
+            href="https://github.com/Anubhavspeaks01"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-full bg-white/5 border border-white/10 hover:border-cyan-400/40 hover:bg-cyan-400/10 transition-all hover:scale-110"
@@ -137,7 +139,7 @@ export default function Hero3D() {
             <Github className="w-6 h-6" />
           </a>
           <a
-            href="https://www.linkedin.com/in/durgesh-singh-09844b253/"
+            href="https://www.linkedin.com/in/anubhavsinghiitm/"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-full bg-white/5 border border-white/10 hover:border-cyan-400/40 hover:bg-cyan-400/10 transition-all hover:scale-110"
@@ -147,7 +149,7 @@ export default function Hero3D() {
             <Linkedin className="w-6 h-6" />
           </a>
           <a
-            href="mailto:dsgaur1125@gmail.com"
+            href="mailto:singhanubhav9415@gmail.com"
             className="p-3 rounded-full bg-white/5 border border-white/10 hover:border-white/30 hover:bg-white/10 transition-all hover:scale-110"
             aria-label="Send email"
             title="Send email"

@@ -11,22 +11,22 @@ export default function HighlightsGrid() {
     {
       icon: <GraduationCap className="w-5 h-5" />,
       title: "Education",
-      desc: "B.Tech (IT), IIIT Una (2024–2028)",
+      desc: "B.Tech (AIML),  KIET Group Of Institutions, Ghaziabad (2024–2028),  BS (DS-ML), IIT Madras",
     },
     {
       icon: <Briefcase className="w-5 h-5" />,
       title: "Experience",
-      desc: "Ex-Research Intern at IIITDM Jabalpur",
+      desc: "Ex-Machine Learning Intern – worked on diverse ML projects, currently developing a real estate–based predictive model. Also led management operations at my college club to drive impactful initiatives.",
     },
     {
       icon: <Target className="w-5 h-5" />,
       title: "Focus Areas",
-      desc: "AI/ML/DL, Computer Vision, Gen AI",
+      desc: "AI/ML/DL · Computer Vision · Generative AI · NLP · Neural Networks · Data Analysis · Model Optimization · DSA · Competitive Programming · Python · TensorFlow · PyTorch · Git",
     },
     {
       icon: <Code2 className="w-5 h-5" />,
       title: "Expertise",
-      desc: "Python, C++, Flask, TensorFlow, PyTorch",
+      desc: "💻 Expertise: Python · C++ · Flask · TensorFlow · PyTorch · Scikit-learn · Computer Vision · DSA · Competitive Programming",
     },
   ];
 

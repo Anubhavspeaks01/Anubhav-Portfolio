@@ -10,10 +10,10 @@ export default function AboutMe() {
   useParallax(headingRef, { amount: 12 });
 
   const features = [
-    { title: "Education", desc: "B.Tech (IT), IIIT Una (2024–2028)" },
-    { title: "Experience", desc: "Ex-Research Intern at IIITDM Jabalpur" },
-    { title: "Focus Areas", desc: "AI/ML/DL, Computer Vision, Gen AI" },
-    { title: "Expertise", desc: "Python, C++, Flask, TensorFlow, PyTorch" },
+    { title: "Education", desc: "B.Tech (AIML), KIET Group Of Institutions, Ghaziabad (2024–2028),  BS(DS&ML), IIT Madras" },
+    { title: "Experience", desc: "Ex-Machine Learning Intern – worked on diverse ML projects, currently developing a real estate–based predictive model. Also led management operations at my college club to drive impactful initiatives." },
+    { title: "Focus Areas", desc: "AI/ML/DL · Computer Vision · Generative AI · NLP · Neural Networks · Data Analysis · Model Optimization · DSA · Competitive Programming · Python · TensorFlow · PyTorch · Git" },
+    { title: "Expertise", desc: "Expertise: Python · C++ · Flask · TensorFlow · PyTorch · Scikit-learn · Computer Vision · DSA · Competitive Programming" },
   ];
 
   // Simple tilt handler for cards (no external libs)
@@ -40,7 +40,7 @@ export default function AboutMe() {
   <div className="text-center mb-12" data-reveal ref={headingRef}>
           <h2 className="text-3xl md:text-4xl font-bold">About</h2>
           <p className="text-white/80 mt-2 max-w-2xl mx-auto">
-            Hi, I&apos;m Durgesh Singh, a passionate AI & Web Developer who loves turning ideas into intelligent and user-friendly digital products. I enjoy building innovative projects, exploring new technologies, and continuously improving my skills to create real-world impact.
+           Hi, I'm Anubhav Singh — an AI & ML Developer, problem solver, and DSA enthusiast who loves turning ideas into intelligent, high-impact digital products. I’m passionate about crafting efficient solutions, exploring emerging technologies, and writing clean, elegant code that bridges innovation with real-world value.
           </p>
         </div>
 

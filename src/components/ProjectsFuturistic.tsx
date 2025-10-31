@@ -11,47 +11,26 @@ export default function ProjectsFuturistic() {
   useParallax(headingRef, { amount: 18 });
   const projects = [
     {
-      title: "StylishGenie",
+      title: "MCQ Generator",
       description:
-        "A minimal, soothing fashion assistant web app. Explore curated styles and clean UI.",
-      tech: ["React", "TypeScript", "Tailwind", "Vercel"],
-      url: "https://stylishgenie.vercel.app/",
+        "AI-powered MCQ Generator using Gemini API to create questions from text automatically.",
+      tech: ["Python", "Machine Learning", "Gemini API"],
+      github: "https://github.com/Anubhavspeaks01/Mcq_Generator",
     },
-    {
-      title: "AgriSpect",
+        {
+      title: "AMR Prediction",
       description:
-        "AI-powered crop detection & counting system for smart farming using deep learning and CV.",
-      tech: ["Python", "Computer Vision", "Deep Learning"],
-      github: "https://github.com/DurgeshRajput11/AgriSpect",
+        "A machine learning model built to predict Antimicrobial Resistance using data-driven analysis and classification techniques.",
+      tech: ["Python", "Scikit-learn", "Machine Learning"],
+      github: "https://github.com/Anubhavspeaks01/AMR_PREDICTION_livestock",
     },
-    {
-      title: "Rockfall Predictor",
+      {
+      title: "MBTI Personality Prediction",
       description:
-        "Rockfall risk prediction for open-pit mining using ML with an end-to-end MLOps pipeline.",
-      tech: ["Python", "Machine Learning", "MLOps"],
-      github: "https://github.com/DurgeshRajput11/Rockfall-predictor",
-    },
-    {
-      title: "MindMate",
-      description:
-        "Anonymous AI wellness companion focused on empathetic conversations and guidance.",
-      tech: ["Python", "AI", "NLP"],
-      github: "https://github.com/DurgeshRajput11/MindMate",
-    },
-    {
-      title: "ASL-AI",
-      description:
-        "Real-time American Sign Language to Text & Speech translator using Computer Vision.",
-      tech: ["Python", "Computer Vision", "Deep Learning"],
-      github: "https://github.com/DurgeshRajput11/ASL-AI",
-    },
-    {
-      title: "FWI Predictor",
-      description:
-        "Predicting Fire Weather Index from environmental features using classic ML models.",
-      tech: ["Python", "Machine Learning", "Data Science"],
-      github: "https://github.com/DurgeshRajput11/FWI-Predictor",
-    },
+        "An NLP-based model that predicts personality types from text using machine learning techniques.",
+      tech: ["Python", "Pandas & Numpy", "Machine Learning"],
+      github: "https://github.com/Anubhavspeaks01/MBTI_Personality_prediction",
+    }
   ];
 
   return (
@@ -61,7 +40,7 @@ export default function ProjectsFuturistic() {
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Featured <span className="text-cyan-400">Projects</span>
           </h2>
-          <p className="text-lg text-white/70">Some of my recent work in AI/ML and Computer Vision</p>
+          <p className="text-lg text-white/70">Some of my recent work in AI/ML and GenAI</p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -126,7 +105,7 @@ export default function ProjectsFuturistic() {
         <div className="mt-12 text-center">
           <button
             className="rounded-lg border border-cyan-400/40 hover:bg-cyan-400/10 py-2.5 px-5 text-white inline-flex items-center gap-2"
-            onClick={() => window.open("https://github.com/DurgeshRajput11", "_blank")}
+            onClick={() => window.open("https://github.com/Anubhavspeaks01", "_blank")}
           >
             <Github className="w-4 h-4" />
             View All Projects on GitHub

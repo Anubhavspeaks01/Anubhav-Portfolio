@@ -13,25 +13,25 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Durgesh Singh — AI/ML Portfolio",
-  description: "Futuristic portfolio showcasing AI/ML, Computer Vision, and Gen AI projects by Durgesh Singh.",
-  metadataBase: new URL("https://durgesh-portfolio-pied.vercel.app"),
+  title: "Anubhav Singh — AI/ML Portfolio",
+  description: "Futuristic portfolio showcasing AI/ML, Computer Vision, and Gen AI projects by Anubhav Singh.",
+  metadataBase: new URL("https://Anubhav-portfolio-pied.vercel.app"),
   icons: {
     icon: "/icon.svg",
     shortcut: "/icon.svg",
     apple: "/icon.svg",
   },
   openGraph: {
-    title: "Durgesh Singh — AI/ML Portfolio",
-    description: "Futuristic portfolio showcasing AI/ML, Computer Vision, and Gen AI projects by Durgesh Singh.",
+    title: "Anubhav Singh — AI/ML Portfolio",
+    description: "Futuristic portfolio showcasing AI/ML, Computer Vision, and Gen AI projects by Anubhav Singh.",
     url: "/",
-    siteName: "Durgesh Portfolio",
+    siteName: "Anubhav Portfolio",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Durgesh Singh — AI/ML Portfolio",
-    description: "Futuristic portfolio showcasing AI/ML, Computer Vision, and Gen AI projects by Durgesh Singh.",
+    title: "Anubhav Singh — AI/ML Portfolio",
+    description: "Futuristic portfolio showcasing AI/ML, Computer Vision, and Gen AI projects by Anubhav Singh.",
   },
 };
 
