@@ -9,7 +9,14 @@ export default function ProjectsFuturistic() {
   useSectionReveal(ref);
   const headingRef = useRef<HTMLDivElement>(null!);
   useParallax(headingRef, { amount: 18 });
-  const projects = [
+  type Project = {
+  title: string;
+  description: string;
+  tech: string[];
+  github: string;
+  url?: string; // optional field (can add later)
+};
+  const projects:Project[]= [
     {
       title: "MCQ Generator",
       description:
