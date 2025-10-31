@@ -1,39 +1,26 @@
-## Durgesh Portfolio
+🌐 Anubhav Portfolio
 
-Futuristic personal portfolio built with Next.js, Tailwind CSS, and a subtle 3D neural-network background. Sections include Hero, About, Projects, Tech Stack, and Contact, with smooth GSAP reveal animations and a clean cyan/teal theme.
+A futuristic personal portfolio built with Next.js, Tailwind CSS, and a sleek 3D neural-network background.
+It features smooth GSAP animations, an elegant cyan/teal theme, and sections like Hero, About, Projects, Tech Stack, and Contact — perfectly showcasing AI/ML and web development projects.
 
-- Live site: https://dsrajput.dev
-- Repo: https://github.com/DurgeshRajput11/Durgesh-Portfolio
+Live Site: https://anubhav-portfolio-pink.vercel.app/
 
-### Features
-- Next.js App Router + TypeScript
-- Tailwind CSS theming (cyan/teal palette)
-- 3D neural constellation using Three.js and @react-three/fiber
-- GSAP ScrollTrigger section reveals
-- Robust icon loading (brand-first with fallbacks)
+Repo: https://github.com/Anubhavspeaks01/Anubhav-Portfolio
 
-### Getting Started
+Contact: 📧singhanubhav9415@gmail.com
 
-Install dependencies and start the dev server:
+✨ Features
 
-```powershell
-npm install
-npm run dev
-```
+⚡ Built with Next.js App Router + TypeScript
 
-Open https://Dsrajput.dev to view the site.
+🎨 Tailwind CSS theming (cyan/teal futuristic palette)
 
-### Scripts
-- dev: Start the development server
-- build: Production build
-- start: Run the production build
-- lint: Lint the codebase
+🧠 3D Neural Constellation background using three & @react-three/fiber
 
-### Tech Stack
-- Framework: Next.js (App Router), TypeScript
-- Styling: Tailwind CSS
-- 3D/Graphics: three, @react-three/fiber, @react-three/drei
-- Animation: GSAP + ScrollTrigger
+🎞️ GSAP ScrollTrigger animations for smooth section reveals
 
-### Deploy
-Deployed on Vercel. You can deploy your own fork by importing this repo into Vercel and setting the framework to Next.js.
+🧩 Modular components for Hero, About, Projects, Tech Stack & Contact
+
+🪄 Lucide React Icons with fallback logic
+
+📱 Fully responsive & mobile-friendly design
